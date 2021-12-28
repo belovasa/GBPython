@@ -20,9 +20,9 @@ def convert_time(duration: int) -> str:
          dur_min = duration//60
          result = result + str(dur_min) + ' мин '
          duration = duration % 60
-      else:
-         dur_sec = duration
-         result = result+str(dur_sec) + ' сек'
+   else:
+      dur_sec = duration
+      result = result+str(dur_sec) + ' сек'
    return result
 
 # duration = 53
