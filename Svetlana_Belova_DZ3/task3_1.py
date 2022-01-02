@@ -16,11 +16,11 @@ $ num_translate("eight")
 
 def num_translate(value: str) -> str:
     """переводит числительное с английского на русский """
-    dic_number = {'zero': '"ноль"', 'one': '"один"', 'two': '"два"', 'three': '"три"',
-                  'four': '"четыре"', 'five': '"пять"', 'six': '"шесть"',
-                  'seven': '"семь"', 'eight': '"восемь"', 'nine': '"девять"',
-                  'ten': '"десять"'}
-    str_out = dic_number.get(value)
+    dic_number = {'zero': 'ноль', 'one': 'один', 'two': 'два', 'three': 'три',
+                  'four': 'четыре', 'five': 'пять', 'six': 'шесть',
+                  'seven': 'семь', 'eight': 'восемь', 'nine': 'девять',
+                  'ten': 'десять'}
+    str_out = '"'+dic_number.get(value)+'"'
     return str_out
 
 
