@@ -1,0 +1,61 @@
+#a. Проверить, установлен ли пакет pillow в глобальном окружении. Если да — зафиксировать версию
+pip show pillow
+WARNING: Package(s) not found: pillow
+
+#b. Установить самую свежую версию pillow, если ранее она не была установлена.
+pip install pillow
+Collecting pillow
+  Downloading Pillow-9.0.0-cp39-cp39-win_amd64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 1.3 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-9.0.0
+
+$ pip show pillow
+Name: Pillow
+Version: 9.0.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: d:\users\belov\pycharmprojects\gbpython\venv\lib\site-packages
+Requires:
+Required-by:
+
+
+#c. Создать и активировать виртуальное окружение. Убедиться, что в нем нет пакета pillow.
+ python -m venv my_virt
+
+D:\Users\belov\PycharmProjects\GBPython>.\my_virt\Scripts\activate
+
+(my_virt) D:\Users\belov\PycharmProjects\GBPython>
+
+
+#d. Установить в виртуальное окружение pillow версии 7.1.1 (или другой, отличной от самой свежей).
+(my_virt) D:\Users\belov\PycharmProjects\GBPython>pip install pillow==8.4.0
+Collecting pillow==8.4.0
+  Downloading Pillow-8.4.0-cp39-cp39-win_amd64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 1.3 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-8.4.0
+
+pip show pillow
+Name: Pillow
+Version: 8.4.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: d:\users\belov\pycharmprojects\gbpython\my_virt\lib\site-packages
+Requires:
+Required-by:
+
+#e. Деактивировать виртуальное окружение.
+
+(my_virt) D:\Users\belov\PycharmProjects\GBPython>deactivate
+D:\Users\belov\PycharmProjects\GBPython>
+
+
+#f. Если будут проблемы с pillow - можно поработать с другим пакетом: например, requests.
+
