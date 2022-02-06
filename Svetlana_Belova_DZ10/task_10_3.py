@@ -60,9 +60,11 @@ class Cell:
         else: result_str +=f'{(self.cells % number) * "*"} '+'\n'
         return result_str
 
+    @erorr_decorator
     def __add__(self, other):
         return Cell(self.cells + other.cells)
 
+    @erorr_decorator
     def __sub__(self, other):
         if (self.cells - other.cells) <= 0:
             raise ValueError('Недопустимая операция')
@@ -72,9 +74,11 @@ class Cell:
     def __mul__(self, other):
         return Cell(self.cells * other.cells)
 
+    @erorr_decorator
     def __truediv__(self, other):
         return Cell(self.cells // other.cells)
 
+    @erorr_decorator
     def __floordiv__(self, other):
         return self.__truediv__(other)
 
